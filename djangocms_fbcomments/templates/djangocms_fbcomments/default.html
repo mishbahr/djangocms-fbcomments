@@ -1,0 +1,31 @@
+{% load i18n staticfiles sekizai_tags %}
+<div class="facebook-comments">
+    {% if instance.title %}<h3 id="comments-title">{{ instance.title }}</h3>{% endif %}
+    {% if instance.load_trigger == 'click' %}
+        <button class="btn btn-default center-block js-show-comments">
+            {% if instance.button_text %}{{ instance.button_text }}{% else %}{% trans 'Load Comments' %}{% endif %}
+        </button>
+    {% endif %}
+    <div class="comments-wrapper js-comments-wrapper">
+        <div class="fb-comments" data-href="{{ page_url }}" data-numposts="{{ instance.num_posts }}" data-order-by="{{ instance.order_by }}" data-width="100%" data-colorscheme="{{ instance.colour_scheme }}"></div>
+    </div>
+</div>
+
+{% addtoblock 'js' %}
+    <script src="{% static 'js/djangocms_fbcomments/jquery.lazyload.js' %}"></script>
+    <script src="{% static 'js/djangocms_fbcomments/jquery.fbcomments.js' %}"></script>
+{% endaddtoblock %}
+
+{% addtoblock 'js' %}
+    <script type="text/javascript">
+        $('.facebook-comments').fbComments({
+            appId: '{{ instance.app_id }}',
+            trigger: '{{ instance.load_trigger }}',
+            language: '{{ language_code }}'
+        });
+    </script>
+{% endaddtoblock %}
+
+{% addtoblock 'meta' %}
+    <meta property="fb:app_id" content="{{ instance.app_id }}" />
+{% endaddtoblock %}

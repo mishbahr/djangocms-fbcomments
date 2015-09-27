@@ -1,0 +1,6 @@
+{
+    "package-name": "djangocms-fbcomments",
+    "installed-apps": [
+        "djangocms_fbcomments"
+    ]
+}
