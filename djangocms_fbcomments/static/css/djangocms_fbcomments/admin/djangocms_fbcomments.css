@@ -1,0 +1,12 @@
+.form-row.field-load_trigger{
+    border-bottom: none;
+}
+
+.form-row.field-button_text {
+    display: none;
+}
+
+.form-row.field-button_text.errors {
+    display: block;
+}
+

@@ -24,5 +24,10 @@ class FacebookCommentsPlugin(CMSPluginBase):
         context['page_url'] = request.build_absolute_uri(location=request.path_info)
         return context
 
+    class Media:
+        css = {
+            'all': ('css/djangocms_fbcomments/admin/djangocms_fbcomments.css',)
+        }
+        js = ('js/djangocms_fbcomments/admin/djangocms_fbcomments.js',)
 
 plugin_pool.register_plugin(FacebookCommentsPlugin)
