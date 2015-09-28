@@ -68,3 +68,15 @@ Preview
   :target: http://mishbahr.github.io/assets/djangocms-fbcomments/djangocms-fbcomments-002.png
   :width: 760px
   :align: center
+
+
+You may also like...
+--------------------
+
+* djangocms-disqus - https://github.com/mishbahr/djangocms-disqus
+* djangocms-forms — https://github.com/mishbahr/djangocms-forms
+* djangocms-gmaps — https://github.com/mishbahr/djangocms-gmaps
+* djangocms-instagram — https://github.com/mishbahr/djangocms-instagram
+* djangocms-responsive-wrapper — https://github.com/mishbahr/djangocms-responsive-wrapper
+* djangocms-twitter2 — https://github.com/mishbahr/djangocms-twitter2
+* djangocms-youtube — https://github.com/mishbahr/djangocms-youtube
